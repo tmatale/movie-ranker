@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Add a Movie</title>
+</head>
+<body>
+listings
+<br />
+<br />
+<% for(var i=0; i < movies.length; i++) { %>
+<div>
+<%= i+1 %>.&nbsp;<%= movies[i].title %>&nbsp;(<%= movies[i].year %>)
+</div>
+<% } %>
+</body>

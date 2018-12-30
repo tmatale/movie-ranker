@@ -1,0 +1,12 @@
+{
+  "app": {
+    "hostname": ,
+    "port": 
+  },
+  "database": {
+    "username": ,
+    "password": ,
+    "node_port": ,
+    "database": 
+  }
+}

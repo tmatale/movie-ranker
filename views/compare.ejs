@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Compare Movies</title>
+</head>
+<body>
+
+<% if(movies.length > 0){ %>
+which movie is better?
+<br />
+<br />
+<form action="/compare" method="post">
+
+<% for(var i=0; i < movies.length; i++) { %>
+<div>
+<input type="radio" name="compare" value="<%= i %>"><%= movies[i].title %>&nbsp;(<%= movies[i].year %>)
+<input type="hidden" name="movie_<%= i %>" value="<%= movies[i].id %>" />
+</div>
+<br />
+<div>
+<input type="submit" value="Submit" />
+</div>
+<% } %>
+<% } else { %>
+all movies have been compared
+<% } %>
+
+</form>
+</body>

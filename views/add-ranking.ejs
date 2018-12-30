@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Add Movie</title>
+</head>
+<body>
+which movie is better?
+<br />
+<br />
+<form action="/movie/link/<%= movie.id %>" method="post">
+<% for(var i=0; i < movies.length; i++) { %>
+<div>
+<input type="radio" name="rank_<%= i %>" value="<%= movies[i].id %>"><%= movies[i].title %>&nbsp;(<%= movies[i].year %>)
+<br />
+<input type="radio" name="rank_<%= i %>" value="<%= movie.id %>"><%= movie.title %>&nbsp;(<%= movie.year %>)
+<br />
+<br />
+</div>
+<% } %>
+<br />
+<input type="submit" value="Add">
+</form>
+</body>

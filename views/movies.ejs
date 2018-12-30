@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Add Movie</title>
+</head>
+<body>
+movies
+<br />
+<br />
+<form action="movies" method="post">
+<% for(var i=0; i < movies.length; i++) { %>
+<div>
+<a href="/movie/link/<%= movies[i].id %>"><%= movies[i].title %>&nbsp;(<%= movies[i].year %>)</a>
+</div>
+<% } %>
+</form>
+</body>
